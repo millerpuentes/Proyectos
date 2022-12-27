@@ -9,4 +9,10 @@ Marketing management to improve goal setting in campaigns requires being able to
 
 2. We create the view that answers the business question (view local.sql) and load the data into the script by making a connection with MySQL and converting it into a dataframe (Modelo.ipynb).
 
-3. 
+3. Build the model
+
+4. Make predictions
+
+5. Evaluate the accuracy of the model
+
+6. Conduct analysis for the business
