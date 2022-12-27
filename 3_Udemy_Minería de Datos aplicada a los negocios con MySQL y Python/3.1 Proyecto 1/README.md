@@ -7,7 +7,7 @@ Marketing management to improve goal setting in campaigns requires being able to
 
 1. Database is loaded into MySQL and recived (BD_proyecto1.sql) and receive the name "nuevo_esquema" on MySQL Workbench.
 
-2. We create the view that answers the business question (view local.sql) and load the data into the script by making a connection with MySQL and converting it into a dataframe (Modelo.ipynb).
+2. We create the query that answers the business question (3.1_query.sql) and load the data into the script by making a connection with MySQL and converting it into a dataframe (Modelo.ipynb).
 
 3. Build the model
 

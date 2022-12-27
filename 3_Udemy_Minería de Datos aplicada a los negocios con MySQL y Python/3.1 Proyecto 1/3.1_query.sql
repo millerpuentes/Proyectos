@@ -1,4 +1,3 @@
-CREATE VIEW lineal AS
 SELECT 
     -- CONCAT(YEAR(t1.OrderDate), "-", MONTH(t1.OrderDate)) AS perido,
     COUNT(DISTINCT t1.SalesOrderID) as transacciones,
