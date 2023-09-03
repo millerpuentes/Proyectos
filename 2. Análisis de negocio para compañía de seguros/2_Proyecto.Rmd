@@ -1,0 +1,79 @@
+---
+title: "2_Proyecto: Análisis de negocio para compañía de seguros"
+author: "Miller Puentes"
+date: "2023-06-26"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instalación y carga de librerías
+
+En esta sección se instalan y cargan las librerías:
+
+```{r}
+#install.packages("readxl")
+#install.packages("car")
+#install.packages("explore")
+#install.packages("psych")
+#install.packages("corrplot")
+```
+
+```{r}
+  library(readxl)
+  library(car)
+  library(explore)
+  library(psych)
+  library(corrplot)
+```
+
+## Importando los datos
+
+A continuación se muestran los primeros registros del set de datos:
+
+```{r echo=FALSE}
+InsureCO <- read_excel("C:/Users/relat/Dropbox/Maestría UNIANDES/2 Ciclo/Modelos de análisis estadístico/1 Semana/Ejercicio semana 1/InsureCO.xlsx")
+head(InsureCO)
+```
+
+## Análisis descriptivo de los datos
+
+Las dimensiones del set de datos son:
+
+```{r echo=FALSE}
+dim(InsureCO)
+```
+
+Las principales características del set de datos:
+
+```{r echo=FALSE}
+summary(InsureCO)
+```
+
+Las gráficas más representativas del set de datos:
+
+```{r echo=FALSE}
+plot(InsureCO)
+head(InsureCO$age)
+```
+
+### Histograma de la edad
+
+```{r echo=FALSE}
+boxplot(InsureCO$age)$out
+```
+
+```{r echo=FALSE}
+tabla <- table(InsureCO$age)
+tabla
+prop.table(tabla)
+
+quantile(InsureCO$age, prob=c(0,0.25,0.5,0.75, 1))
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
